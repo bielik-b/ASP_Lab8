@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Start Page";
+}
+@model int
+<html>
+<head>
+    <title>
+        @ViewData["Title"]
+    </title>
+</head>
+<body>
+    <div class="text-center">
+        <form method="post" style="margin:auto; width:50%">
+            <div>
+                <label>Enter product's ID</label>
+                <input type="number" name="id" />
+            </div>
+            <div>
+                <label>Enter product's name</label>
+                <input type="text" name="name" />
+            </div>
+            <div>
+                <label>Enter product's price</label>
+                <input type="number" name="price" />
+            </div>
+            <div>
+                <label>Enter product's production date</label>
+                <input type="date" name="createdDate" />
+            </div>
+            <br />
+            <button type="submit" asp-action="Index">Add</button>
+            <button type="submit" asp-action="ViewProductsAsList">View as list</button>
+            <button type="submit" asp-action="ViewProductsAsTable">View as table</button>
+        </form>
+    </div>
+</body>
+</html>
